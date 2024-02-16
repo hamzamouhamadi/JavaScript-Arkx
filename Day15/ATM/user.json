@@ -1,0 +1,105 @@
+[
+  {
+    "accountID": "ACC1001",
+    "name": "John Doe",
+    "pin": "1234",
+    "balance": 1500,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 500,
+        "date": "2024-02-01"
+      },
+      {
+        "type": "withdraw",
+        "amount": 200,
+        "date": "2024-02-02"
+      }
+    ]
+  },
+  {
+    "accountID": "ACC1002",
+    "name": "Jane Smith",
+    "pin": "4321",
+    "balance": 2200,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 1000,
+        "date": "2024-02-03"
+      },
+      {
+        "type": "withdraw",
+        "amount": 300,
+        "date": "2024-02-04"
+      }
+    ]
+  },
+  {
+    "accountID": 1,
+    "name": "Hamzaaa",
+    "pin": 2472,
+    "balance": 700007777,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 7777,
+        "date": "2024-02-11T23:40:41.620Z"
+      }
+    ]
+  },
+  {
+    "accountID": 2,
+    "name": "Mohamed",
+    "pin": 8849,
+    "balance": 7777,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 7777,
+        "date": "2024-02-11T23:41:58.517Z"
+      }
+    ]
+  },
+  {
+    "accountID": 3,
+    "name": "Said",
+    "pin": 7908,
+    "balance": 50000,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 50000,
+        "date": "2024-02-11T23:44:49.077Z"
+      }
+    ]
+  },
+  {
+    "accountID": 4,
+    "name": "ismail",
+    "pin": 1125,
+    "balance": 30000,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 40000,
+        "date": "2024-02-12T00:01:40.063Z"
+      },
+      {
+        "type": "deposit",
+        "amount": 40000,
+        "date": "2024-02-12T00:07:06.505Z"
+      },
+      {
+        "type": "withdraw",
+        "amount": 10000,
+        "date": "2024-02-12T00:07:06.532Z"
+      },
+      {
+        "type": "withdraw",
+        "amount": 40000,
+        "date": "2024-02-12T00:08:15.791Z"
+      }
+    ]
+  }
+]
