@@ -13,8 +13,8 @@ function getAllPosts() {
     }
 }
 ///////////////////////////////////////////////////////////////
-function writePosts(x) {
-    const jsonData = JSON.stringify(x, null, 2);
+function writePosts(posts) {
+    const jsonData = JSON.stringify(posts, null, 2);
 
     fs.writeFileSync(dataFilePath, jsonData);
 }
