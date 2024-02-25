@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 ///////////////////////////////////////////////////////////////
 const dataFilePath = path.join(__dirname, '../data/posts.json');
+
 function getAllPosts() {
     try {
         const rawData = fs.readFileSync(dataFilePath, 'utf8');
@@ -12,8 +13,8 @@ function getAllPosts() {
     }
 }
 ///////////////////////////////////////////////////////////////
-function writePosts(posts) {
-    const jsonData = JSON.stringify(posts, null, 2);
+function writePosts(x) {
+    const jsonData = JSON.stringify(x, null, 2);
 
     fs.writeFileSync(dataFilePath, jsonData);
 }
@@ -22,3 +23,4 @@ module.exports = {
     getAllPosts,
     writePosts
 };
+
