@@ -39,7 +39,6 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
     done(null,user);
 });
-
 ////////////////////////////////////////////////////////////////////////////
 //Set Up Authentication Routes:
 app.get('/auth/google',
@@ -56,7 +55,7 @@ app.get('/login', (req, res) => {
     res.send('<h1>YOU NEED TO LOGIN</h1>')
 });
 
-app.get('/profile', (req, res) => {
+app.get('/profile',(req, res) => {
     if (req.isAuthenticated()) {
         // Access user data using req.user
         res.send(`<h1 style="text-align: center;"> Welcome, <span style =" color: blue;">${req.user.displayName}</span>!</h1>`);

@@ -21,7 +21,7 @@ const addPost = (req,res)=>{
         id: id,
         name: req.body.name ,
         title: req.body.title
-        }; 
+        };
     posts.push(newPost); 
     postModel.writePosts(posts);
     res.status(201).json(newPost);
