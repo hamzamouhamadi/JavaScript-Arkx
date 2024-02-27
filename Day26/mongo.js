@@ -26,3 +26,4 @@ client
   .find().toArray()
   .then((user) => console.log(user))
   .catch((error) => console.log("Error: ", error));
+  
