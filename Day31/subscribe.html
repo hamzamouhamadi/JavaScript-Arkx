@@ -3,109 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Subscribe</title>
 </head>
-<body>
-    <nav>
-        <a href="/">LOGO</a>
+<body style="background-color: rgb(16, 16, 76);">
+    <nav >
         <ul>
-            <li><a href="">Contact Us</a></li>
+            <li class="logo">LOGO</li>
+            <li><a href="./movie.html">Home</a></li>
+            <li><a href="./movieListing.html">Movies</a></li>
             <li><a href="">About Us</a></li>
-            <li><a href="">Movies</a></li>
-            <li><a href="./contactUs.html">Contact Us</a></li>
+            <li><a href="">Blog</a></li>
         </ul>
         <div>
-            <input type="text" placeholder="Search for a movie..."/>
-            <button>Search</button>
+            <input type="text" class="search" placeholder="Search for a movie..."/>
+            <button class="butt">Search</button>
+            <select name="languages">
+                <option value="AR">AR</option>
+                <option value="FR">FR</option>
+                <option value="EN">EN</option>
+            </select>
+            <button class="butt">Subscribe</button>
         </div>
-        <select name="">
-            <option value="AR">AR</option>
-            <option value="FR">FR</option>
-            <option value="EN">EN</option>
-        </select>
-        <BR></BR>
-        <button>Subscribe</button>
     </nav>
-    <section class="subscription">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-        <table>
-            <tr>
-                <th bgcolor="grey">Basic</th>
-                <th bgcolor="grey">Standard</th>
-                <th bgcolor="grey">Premium</th>
-            </tr>
-            <tr bgcolor="whitegrey">
-                <td>49MAD / Month</td>
-                <td>99MAD / Month</td>
-                <td>199MAD / Month</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>✅</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>✅</td>
-                <td>✅</td>
-            </tr>
-            <tr bgcolor="whitegrey">
-                <td><a href="">Subscribe</a></td>
-                <td><a href="">Subscribe</a></td>
-                <td><a href="">Subscribe</a></td>
-            </tr>
-        </table>
-    </section>
-    <br></br>
+    <main>
+        <section class="title-sub">
+            <h2>Select Your Plan</h2>
+            <p>No hidden free. equipment rentals, or installation appointments.</p>
+        </section>
+        <section class="subscribe-card">
+            <div class="card-sub">
+                <p>FREE PLAN</p>
+                <h1>Free.</h1>
+                <a href="" class="plan-button">Choose Plan</a>
+                <p><i class="fa-regular fa-circle-check"></i>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                <p><i class="fa-regular fa-circle-check"></i>Lorem ipsumLorem ipsumLorem ipsum</p>
+                <p><i class="fa-regular fa-circle-check"></i>Lorem ipsumLorem ipsum</p>
+                <p><i class="fa-regular fa-circle-check"></i>Lorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+            <div class="card-sub">
+                <p>DIAMOND PLAN</p>
+                <h1>$9.99 per Month.</h1>
+                <a href="" class="plan-button">Choose Plan</a>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                <p>Lorem ipsumLorem ipsumLorem ipsum</p>
+                <p>Lorem ipsumLorem ipsum</p>
+                <p>Lorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+            <div class="card-sub">
+                <p>PLATINUM PLAN</p>
+                <h1>$39.99 every 2 Months.</h1>
+                <a href="" class="plan-button">Choose Plan</a>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                <p>Lorem ipsumLorem ipsumLorem ipsum</p>
+                <p>Lorem ipsumLorem ipsum</p>
+                <p>Lorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <a href="">LOGO</a>
-        <p>Connect with us</p>
-        <a href="">Facebook</a><a href="">Twitter</a><a href="">Github</a>
-        <p>Help</p>
-        <ul>
-            <li><a href="">My Account</a></li>
-            <li><a href="">Customer Support</a></li>
-            <li><a href="./contactUs.html">Contact Us</a></li>
-            <li><a href="">About Us</a></li>
-        </ul>
-        <p>Download Movies mobile app</p>
-        <img src="./img/favpng_google-play-sharepeeps-aps-app-store-android.png" alt="get google app" width="300">
-        <br></br>
-        <img src="./img/favpng_iphone-app-store-google-play.png" alt="get app store" width="300">
-        <p>Copyright © 2023 Movie APP.All rights reserved</p>
-        <ul>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms Of Services</a></li>
-        </ul>
-        <a href="">Top</a>
-
-
-
-    </footer>
+        <div class="global">
+            <div >
+                <a href="" class="logofooter">LOGO</a>
+            </div>
+            <div class="footericons">
+                <p>Connect with us</p>
+                <a href="">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/hamza_mouhamadi">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div>
+                <p>Help</p>
+                <ul>
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Customer Support</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Download Movies mobile app</p>
+                <img src="./img/favpng_google-play-sharepeeps-aps-app-store-android.png" alt="get google app" width="280">
+                <br/>
+                <img src="./img/favpng_iphone-app-store-google-play.png" alt="get app store" width="280">
+            </div>
+        </div>
+        <hr>
+        <div class="footerbuttom">
+            <div>
+                <p>Copyright © 2023 Movie APP. All rights reserved</p>
+            </div>
+            <div>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms Of Services</a>
+                <a href="">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>  
 </body>
 </html>

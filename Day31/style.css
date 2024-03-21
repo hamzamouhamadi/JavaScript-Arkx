@@ -1,0 +1,218 @@
+header {
+    background-image: url('./img/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover; 
+    background-position: center;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    height:700px;
+}
+header .header-content {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+
+.genre, .bigtitle, .filmDetails, .description, .playbutton, .watch-later {
+    margin-bottom: 30px; 
+}
+.playbutton:hover{
+    background-color: rgb(212, 82, 82);
+}
+.genre{
+    text-transform: uppercase;
+    font-weight:bold ;
+    color: rgb(28, 148, 208);
+}
+.tv-ma{
+    background-color: gray;
+    padding: 2px;
+    border-radius: 4px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: bold;
+    font-size: 3.3rem;
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* align items vertically */
+}
+nav ul li {
+    padding: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+}
+.search {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 20px;
+    background-color: rgb(44, 33, 63);
+    color: white;
+    background: transparent;
+}
+.butt, select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+}
+.butt {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(44, 33, 63);
+    color: white;
+}
+.bigtitle{
+    font-size: 70px;
+}
+.img-card{
+    border-radius: 8px;
+}
+.filmDetails {
+    display: flex;
+    margin-right: 10px;
+}
+.filmDetails p{
+    margin-right: 10px;
+}
+.film-details{
+    display: flex;
+}
+.film-details p{
+    display: flex;
+    font-style: oblique;
+    color: white;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+}
+.playbutton{
+    background-color: rgb(99, 236, 248);
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+    margin-right: 20px;
+    color: white;
+}
+.watch-later{
+    color: white;
+}
+.hero{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.p-a-main{
+    display: flex;
+    justify-content: space-around;
+}
+.films {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.card {
+    width: 314px;;
+    margin-right: 8px;
+    border-radius: 10px;
+}
+
+/* Subscribtion*/
+.title-sub{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+.subscribe-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-sub{
+    border: 2px solid rgb(207, 60, 233);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+}
+.plan-button{
+    border: 1px solid rgb(207, 60, 233);
+    color: rgb(207, 60, 233);
+    border-radius: 10px;
+    padding:10px 20px 10px 20px;
+}
+.plan-button:hover{
+    background-color: rgb(207, 60, 233);
+    color: white;
+    
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color:rgb(67, 17, 142); ;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.global{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.footerbuttom{
+    display: flex;
+    justify-content: space-between;
+}
+.logofooter{
+    font-size: 70px;
+    font-weight: bold;
+}
+.footericons a {
+    margin-right: 30px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+}
