@@ -12,9 +12,12 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-hook-form": "^7.51.1",
+    "react-router-dom": "^6.22.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
