@@ -1,0 +1,18 @@
+
+  
+  .light {
+    background-color: #ffffff;
+
+  }
+  
+  .dark {
+    background-color: #1a1a1a;
+
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
