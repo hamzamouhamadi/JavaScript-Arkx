@@ -1,13 +1,17 @@
 const express = require("express")
-const {getPosts,addPost,findPost,updatePost,deletePost} = require("../controllers/postController")
-const middleware = require('../middleware/localAuth')
+const {getPosts,addPost,findPost,updatePost,deletePost,getMyPosts,UserPosts} = require("../controllers/postController")
+const middleware = require('../middleware/localAuth');
+const upload = require("../utils/mlter")
+
 const isLogged = middleware.isLogged;
 const router = express.Router();
 ///////////////////////////////////////////////////////////////
-router.get('/',getPosts);
-router.post('/',isLogged,addPost);
+router.get('/posts',getPosts);
+router.post('/addPost',upload.single('image'),isLogged,addPost);
+router.get('/myPosts',isLogged, getMyPosts) 
 router.get('/:id',findPost);
-router.put('/:id',updatePost);
-router.delete('/:id',deletePost);
+router.put('/update/:id',isLogged,updatePost);
+router.delete('/delete/:id',isLogged,deletePost);
+router.get('/UserPosts/:id',UserPosts)
 ///////////////////////////////////////////////////////////////
 module.exports = router;

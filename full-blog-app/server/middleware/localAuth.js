@@ -1,18 +1,28 @@
 const express = require('express');
 const passport = require('passport');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const User = require('../model/user.model')
+const bodyParser = require("body-parser")
+require('dotenv').config();
 //////////////////////////////////////////////////////////////////////
 const app = express();
 app.use(express.json())
 //////////////////////////////////////////////////////////////////////
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 // Configure session middleware
 app.use(session({
-  secret: 'secret',
+  secret: process.env.Secret,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true,
+  cookie: {
+    sameSite: 'lax',
+    secure: false, // Set to true if using HTTPS
+    maxAge: 1000 * 60 * 60 * 24 * 14 // 14 days
+ }
 }));
 //////////////////////////////////////////////////////////////////////
 // Initialize Passport middleware
@@ -23,10 +33,10 @@ app.use(passport.session());
 
 //////////////////////////////////////////////////////////////////////
 // Configure Passport local strategy for authentication
-passport.use(new LocalStrategy(
-  async function(username, password, done) {
+passport.use(new LocalStrategy({usernameField:'email'},
+  async function(email, password, done) {
     try {
-      let user = await User.findOne({username})
+      let user = await User.findOne({email})
       if (!user) {
         return done(null, false, { message: 'User not found' });
       }
@@ -41,24 +51,33 @@ passport.use(new LocalStrategy(
   }
 ));
 //////////////////////////////////////////////////////////////////////
-// Serialize user object to store in the session
 passport.serializeUser((user, done) => {
-  done(null, user);
+  done(null, user._id);
 });
-//////////////////////////////////////////////////////////////////////
-// Deserialize user object from the session
-passport.deserializeUser((user, done) => {
-  //const user = User.findById({_id : id});
-  done(null, user);
+
+passport.deserializeUser(async (_id, done) => {
+  try {
+    const user = await User.findOne({ _id });
+    done(null, user);
+  } catch (error) {
+    done(error);
+  }
 });
+
 
  function isLogged(req, res, next) {
     if (req.user) {
         return next();
-    } else {
-        res.sendStatus(401);
-    }
-}
+    } 
+    res.redirect('/login')
+} 
+
+// function NotLogod(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     return res.redirect('/')
+//   }
+//   next()
+// }
 
 module.exports = {
   app : app,

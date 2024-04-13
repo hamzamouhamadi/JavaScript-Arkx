@@ -1,18 +1,17 @@
 const passport = require('passport');
 const bcrypt = require('bcrypt')
 const User = require('../model/user.model')
+const Post = require('../model/poste.model')
 //////////////////////////////////////////////////////////////////////
 // Route to handle user login
 const register = async (req, res) => {
-  let {username, email,password,fullName,dateOfBirth,role} = req.body
+  let {username, email,password,role} = req.body
   try {
     let hashedPass = await bcrypt.hash(password,  10);
     const user = await User.create({ 
       username: username ,
       email : email,
       password : hashedPass,
-      fullName : fullName,
-      dateOfBirth : dateOfBirth,
       role : role})
     res.send(user);
   } catch (err) {
@@ -27,17 +26,18 @@ const register = async (req, res) => {
 const login = (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/profile',
-    failureRedirect: '/login',
+    failureRedirect: '/user/login',
     failureFlash : true,
   })(req, res, next);
 };
+
 //////////////////////////////////////////////////////////////////////
 // Get one user
 const getUser = async (req,res)=>{
   try {
     let _id = req.user._id
-    let user = await User.findOne({_id})
-    res.send(user)
+    let user = await User.find({_id})
+    res.json(user)
   } catch (error) {
     console.log('Problem to get user');
   }
@@ -56,18 +56,14 @@ const getAll = async(req, res) => {
 //Route of  Update Profile
 const updateUser = async (req, res) => {
     let ID = req.user._id
-    let {username,email,password,fullName,dateOfBirth,role} = req.body
+    let {username,email} = req.body
     try {
-        let hashedPass = await bcrypt.hash(password,  10);
-
+        //let hashedPass = await bcrypt.hash(password,  10);
         let userUpdated =  await User.updateOne({_id : ID},{$set:{
           username: username ,
           email : email,
-          password : hashedPass,
-          fullName : fullName,
-          dateOfBirth : dateOfBirth,
-          role : role}})
-        res.send(userUpdated);
+          }})
+        res.send('User Updated');
       } catch (err) {
         res.status(500).send(err);
       }
@@ -82,5 +78,16 @@ const updateUser = async (req, res) => {
       res.send(error);
    }
  }
+//////////////////////////////////////////////////////////////////////
+// Delete Route
+ const delteUser = async(req,res)=>{
+  let ID = req.user._id
+   try {
+    await User.deleteOne({_id : ID})
+    res.send('User  Deleted')
+   } catch (error) {
+      res.send(error);
+   }
+ }
 
-module.exports = {register,login,getUser,logout,getAll,updateUser}
+module.exports = {register,login,getUser,logout,getAll,updateUser,delteUser}
